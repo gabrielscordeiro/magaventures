@@ -1,0 +1,35 @@
+@import "partials/base";
+
+header {
+    padding: 20px 0;
+
+    .container {
+        @include breakpoint($break-medium) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .acoes-social {
+        @include breakpoint($break-medium) {
+            margin-top: 10px;
+        }
+    }
+
+    .seja-incubado {
+        font-size: em(16);
+        text-transform: uppercase;
+        text-decoration: underline;
+        color: $cor-texto;
+        font-weight: bold;
+        margin-right: 50px;
+
+        &:hover {
+            color: $cor-base;
+        }
+    }
+
+    .redes-sociais {
+        width: 70px;
+    }
+}

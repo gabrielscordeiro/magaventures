@@ -1,0 +1,70 @@
+@import "partials/base";
+
+footer {
+    padding: 50px 0;
+
+    @include breakpoint($break-medium) {
+        padding: 30px 0;
+    }
+
+    .container {
+        @include breakpoint($break-medium) {
+            flex-direction: column;
+        }
+    }
+
+    h4 {
+        font-size: em(18);
+        font-weight: bold;
+
+        @include breakpoint($break-medium) {
+            font-size: em(14);
+            text-align: center;
+        }
+    }
+
+    .informacoes-contato {
+        @include breakpoint($break-medium) {
+            margin-top: 30px;
+        }
+
+        a.contato-item {
+            display: block;
+            font-size: em(14);
+            color: $cor-texto-secundario;
+            margin-top: 10px;
+
+            @include breakpoint($break-medium) {
+                text-align: center;
+            }
+
+            &:hover {
+                color: $cor-secundaria;
+            }
+        }
+    }
+
+    .mantenedores {
+        @include breakpoint($break-medium) {
+            margin-top: 30px;
+        }
+
+        .lista-mantenedores {
+            @include breakpoint($break-medium) {
+                flex-direction: column;
+            }
+        }
+
+        .logo-mantenedor {
+            margin: 10px;
+
+            img {
+                width: 140px;
+
+                &.magaventures {
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
