@@ -93,11 +93,25 @@
                     Você é uma startup e precisa de fomento?
                 </h2>
 
-                <a href="" class="fale-conosco">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfOAT5u-wWpgNBvpamkUSoNzyld5m4XjIw4CRUkXBHUIB7CNg/viewform?usp=sf_link" class="fale-conosco">
                     Fale Conosco!
                 </a>
             </div>
         </div>
+
+        <script type="text/javascript">
+            $(function () {
+                'use strict';
+                $('a.fale-conosco').on('click', function () {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'click', {
+                            'event_category': 'button',
+                            'event_label': 'formulario-fale-conosco'						
+                        });
+                    }
+                });
+            });
+        </script>
 
         <div id="maps"></div>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaZAPhgo7bGZrEpKARnp-CDTCbd38Gp4&callback=initMap" type="text/javascript"></script>
