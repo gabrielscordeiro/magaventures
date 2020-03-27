@@ -23,10 +23,10 @@
         content="">
 
     <meta name="description"
-        content="">
+        content="Precisa de fomento, queremos conhecer você!">
     <meta name="title" content="Magaventures">
     <meta name="keywords"
-        content="startup, incubadora" />
+        content="startup, varejo, vendas e marketing, serviços, seguros, educação, finanças, gestão empresarial, logística, agricultura, saúde, investimentos, inteligência artificial, machine learning, big data, blockchain" />
 
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700&display=swap"
         rel="stylesheet">
@@ -36,14 +36,6 @@
 
     <script type="text/javascript" src="web-magaventures/js/jquery-3.4.0.min.js"></script>    
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-55222963-6"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-55222963-6');
-    </script>
 </head>
 
 <body>
@@ -70,7 +62,53 @@
     </header>
 
     <div class="container-geral">
+        <div class="descricao-topo">
+            <div class="container">                
+                <p>
+                    Buscamos startups em estágio de anjo/seed, que estejam nas seguintes fases:
+                </p>
+                <p>
+                    - Solução validada e que estejam em busca dos seus primeiros clientes;
+                </p>
+                <p>
+                    - Já tenham os primeiros clientes pagantes e que faturem até R$ 500.000,00/ano;
+                </p>
+                <p>
+                    Nosso foco são em startups que resolvam problemas reais de mercado e que queiram se desenvolver de forma sustentável.
+                </p>
+            </div>
+        </div>
 
+        <div class="box-startup">
+            <div class="container">
+                <h2>
+                    Você é uma startup e precisa de fomento?
+                </h2>
+
+                <a href="" class="fale-conosco">
+                    Fale Conosco!
+                </a>
+            </div>
+        </div>
+
+        <div id="maps"></div>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXaZAPhgo7bGZrEpKARnp-CDTCbd38Gp4&callback=initMap" type="text/javascript"></script>
+        <script type="text/javascript">
+            function initMap() {
+                var latLng = {lat: -27.2391518, lng: -49.6757256};
+                var mapDiv = document.getElementById('maps');
+                var map = new google.maps.Map(mapDiv, {
+                    center: latLng,
+                    zoom: 16,
+                    scrollwheel: false,
+                });
+                var marker = new google.maps.Marker({
+                    position: latLng,
+                    map: map,
+                    title: 'Magaventures'
+                });
+            }
+        </script>
     </div>
 
     <footer itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -81,8 +119,10 @@
         <meta itemprop="addressCountry" content="Brasil" />
         <meta itemprop="telephone" content="(47) 3520-8076" />
 
-        <div class="container flex center space-between">
-            asdasd
+        <div class="container flex center justify-center">
+            <a href="/"> 
+                <img src="web-magaventures/image/logo-colorida.svg" alt="Magaventures" title="Magaventures">
+            </a>
         </div>
     </footer>
 </body>
